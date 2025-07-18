@@ -37,7 +37,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	
 	
 	@Bean
-	private SpringTemplateEngine templateEngine() {
+	public SpringTemplateEngine templateEngine() {
 		SpringTemplateEngine engine = new SpringTemplateEngine ();
 				engine.setEnableSpringELCompiler(true);
 				engine.setTemplateResolver(templateResolver());
@@ -49,6 +49,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 				resolver.setApplicationContext(applicationContext);
 				resolver.setPrefix("classPath:/templates/");
 				resolver.setTemplateMode(TemplateMode.HTML);
+				resolver.setSuffix(".html");
 				return resolver; 
 	}
 
