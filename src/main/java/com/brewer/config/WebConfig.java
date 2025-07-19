@@ -14,10 +14,10 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
-import com.brewer.controller.CervejasController;
+import com.brewer.controller.BeerController;
 
 @Configuration
-@ComponentScan(basePackageClasses= {CervejasController.class})
+@ComponentScan(basePackageClasses= {BeerController.class})
 public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	
 	private ApplicationContext applicationContext;
